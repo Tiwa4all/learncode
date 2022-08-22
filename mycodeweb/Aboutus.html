@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./Pictures/favicon.png" type="image/icon type">
+    <style>
+      *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    box-shadow: 0 2px 15px 1px rgb(64 60 67 / 16%);
+    background-color: #1b004f;
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 1;
+}
+.header img{
+    margin-top:-15px;
+    width: 199px;
+    height:130px;
+    display: flex;
+    float: left;
+}
+ul{
+    float: left;
+    display: flex;
+}
+ul li{
+    padding-top: 40px;
+    padding-right:70px;
+    font-style: normal;
+    font-family:Jost, sans-serif;
+    font-size: 18px;
+    max-width: 200px;
+    font-weight: bold;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    color:#6966ff ;
+}
+li{
+    padding-left: calc(1.2em / 2);
+    padding-right: calc(1.2em / 2);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+.dropdown-content{
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #1b004f;;
+    padding:15px;
+    font-size: 15px;
+    font-family: Jost, sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard:hover .dropdown-content {display:block;}
+.arrow{
+    position: absolute;
+    width :24px;
+    height: 20px;
+    color: white;
+}
+.needhelp:hover .dropdown-content {display: block;}
+  .dashboard:hover{
+    animation-name: dash;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes dash {
+        from { margin-top: 0;}
+        to { margin-top: 5px;}
+  }
+  .needhelp:hover{
+    animation-name: dash;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes dash {
+        from { margin-top: 0;}
+        to { margin-top: 5px;}
+  }
+  .icon{
+        color: white;
+        background-color: black;
+        margin-top: 25px;
+        padding: 14px 16px;
+        margin-right: 20px;
+        height: 45px;
+        text-decoration: none;
+        font-size: 17px;
+        display: none;
+  }
+  section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #42455a;
+      background: #f0f0ff;
+    }
+    section .container {
+      margin: 50px;
+    }
+    /* section h1{
+      font-size: 3rem;
+      margin: 20px;
+    } */
+    section h2 {
+      font-family: abel;
+      margin-top: 50px;
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    section .text-container {
+      display: flex;
+    }
+    section .text-container .text-box {
+      margin: 20px;
+      padding: 20px;
+      width: 50%;
+      height: 350px;
+      background: #0098da;
+    }
+    section .text-container .text-box h3 {
+      font-size: 30px;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .text-box h3{
+      color: #1b004f;
+      font-size: 18px !important;
+      font-family: fira code;
+      font-style: normal;
+    }
+    .text-box p{
+      color: white;
+      font-size: 16px;
+      font-family: fira code;
+    }
+    .reveal {
+      position: relative;
+      opacity: 0.5;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+    }
+    .active.fade-left {
+      animation: fade-left 1s ease-in;
+    }
+    .active.fade-right {
+      animation: fade-right 1s ease-in;
+    }
+    @keyframes fade-left {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fade-right {
+      0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      .dashboard:hover .dropdown-content {
+      position: relative;
+      float: none;
+      clear: both;}
+    .needhelp:hover .dropdown-content {
+      position: relative;
+      float: none;
+      clear: both;
+    }
+    .icon{
+        display: block;
+}
+    #list{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin-top: 84px;
+      background-color: #f0f0ff;
+      width: 100%;
+}
+.needhelp{
+    margin-bottom: 25px;
+  }
+    .arrow{
+      color: #1b004f;
+}
+    #list a{
+      color:#1b004f;
+    }
+    .header #list{
+        display: none;
+    }
+    section h2{
+      font-size: 25px;
+    }
+    .text-container {
+      flex-direction: column;
+    }
+    .text-box{
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 550px !important;
+    }
+    .text-box p{
+      line-height: 25px;
+    }
+    }
+    /* iframe{
+      width: 100%;
+      height: 600px;
+    } */
+    </style>
+</head>
+<body>
+  <div class="header">
+    <img src="./Pictures/ZODIADwhite.png" alt="" class="src">
+        <ul type="none" id="list">
+            <li><a href="./Courses/Courses .html">Courses</a></li>
+            <li id="ddd" class="dashboard"><a href="#">Dashboard</a>
+                <svg aria-hidden="true" class="arrow" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Expand</title><path d="M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg>
+                    <div id="dropp" class="dropdown-content">
+                      <a href="./Visting page.html">Home</a>
+                        <a href="./Aboutus.html">About us</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Account Settings</a>
+                    </div>
+            </li>
+            <li><a href="./Family Tree/worktree.html">Our Team</a></li>
+            <li><a href="#">Logout</a></li>
+            <li class="needhelp"><a href="#">Need Help</a>
+                <svg aria-hidden="true" class="arrow" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Expand</title><path d="M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg>
+                    <div class="dropdown-content">
+                        <a href="#">FAQ</a>
+                        <a href="#">Tiwa4all Designs</a>
+                    </div>
+            </li>
+        </ul>
+            <div class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </div>
+</div>
+<div class="wholesection">
+  <section>
+      <div class="container reveal fade-left">
+        <h2>About Us</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h3>Diverse Coding Experience</h3>
+              <p class="p1"> From database design and web app development to system integrations 
+                  and cloud consulting, our diverse team of Full-Stack Developers has 
+                  the expertise to build your next software application. Our developers 
+                  have many years of combined experience working with Java, JavaScript, 
+                  PHP, Python, Objective-C, Ruby on Rails, jQuery, AngularJS, Node.js.NET Framework, 
+                  and much more.
+              </p>
+          </div>
+          <div class="text-box">
+            <h3>Maintenance & Support</h3>
+              <p>Our expert Software Development Team provides ongoing maintenance, monitoring, 
+                  and support to ensure that your custom websites and apps are working at optimal 
+                  performances. Our Web Development Support and Maintenance Services include testing and 
+                  debugging, updates and maintenance on security protocols and database maintenance.
+              </p>
+          </div>
+          <div class="text-box">
+            <h3>Our Vision</h3>
+            <p>
+               Here on Tiwa4all learn, our vision is to build, train and groom future sound programmers and involve them 
+               with tasks such as analysis, generating algorithms, 
+               profiling algorithms' accuracy and resource consumption, and the 
+               implementation of algorithms (usually in a chosen programming language, 
+               commonly referred to as coding)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container reveal fade-right">
+        <div class="text-container">
+          <div class="text-box">
+            <h3>OUR GOAL</h3>
+            <p>
+              Computer programming is the process of performing a particular 
+              computation (or more generally, accomplishing a specific computing result),
+               usually by designing and building an executable computer program.
+               We are so very much interested in teaching compuer programming from scratch, and
+               also to make our website a learning management system for people use and future developers.
+            </p>
+          </div>
+          <div class="text-box">
+              <h3>History</h3>
+              <p>
+                Tiwa4all Learn was built and established by <a href="https://www.linkedin.com/in/oluwatimilehin-wahab-44b4a623b/">Oluwatimilehin Wahab</a> who is a student 
+                at the University of Ilorin and also a senior developer for the purpose
+              on helping future programmers to start their programmig journey with ease and more speed.
+                The Website was originally conceived and developed to meet the demand for automated information-
+                sharing between programmers all around the world. 
+              </p>
+          </div>
+          <div class="text-box">
+              <h3>Mission</h3>
+            <p>
+              Our mission is to provide a free, world-class education to everyone, 
+              anywhere on programming languages without stress. We provide the best materials, tutorial videos, guildlines
+              and courses for you to be fully prepared for programming works out there. Congratulation! You are in the right place to learn.
+              Get started now and register for your preferred programming languages with us today.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <input type="range"> -->
+    <!-- <iframe src="https://www.youtube.com/embed/-KwB_8lcNZc" frameborder="0"></iframe> -->
+      <script>
+function myFunction() {
+    var x = document.getElementById("list");
+    if (x.style.display === "flex") {
+      x.style.display = "";
+    } else {
+      x.style.display = "flex";
+    }
+  }
+
+        function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+      </script>
+</body>
+</html>

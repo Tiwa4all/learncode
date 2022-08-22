@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 20px;
+    /* background-color: gray; */
+    background-image: url("./Pictures/priroda-voda-reka-more-most.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+.subbody{
+    display: flex;
+}
+.group1{
+    /* background-image: url("./timi.jpg"); background-size: cover; background-position: center; height: 700px; */
+    width: 100%;
+}
+.subgroup1{
+    display: flex;
+    justify-content: center;
+    animation-direction: reverse;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-name: group;
+}
+#para{
+    color: #fff;
+    font-family: abel;
+    letter-spacing: 4px;
+}
+h1{
+    font-family: abel;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    color: #fff;
+}
+
+p{
+    text-align: center;
+    margin-top: 10px;
+    font-family: arial;
+    font-weight: bold;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    clip-path: circle();
+}
+form{
+    display: flex;
+    flex-direction: column; 
+}
+input{
+    z-index: 1;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    text-align:center;
+    background-color: transparent;
+    outline: none;
+    font-weight: bold;
+    color: white !important;
+}
+.input::after{
+    background-color: none;
+}
+::placeholder{
+    font-family: Abel;
+    color: #fff;    
+    font-weight: lighter;
+}
+.submit{
+    font-family: Fira code !important;
+    border: none;
+    background-color: rgb(1, 53, 73);
+    width: 100%;
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+#lock{
+    position: relative;
+    top: 34px;
+}
+.eye{
+    position: relative;
+    top:34px;
+}
+#mail{
+    position: relative;
+    top: 35px;
+}
+.sign{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.btf{
+    font-weight: 900;
+    margin-top: 5px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    outline: 1px solid black;
+    color: black;
+    background-color: transparent;
+}
+.btf a{
+    color: white;
+}
+.btf a:hover{
+    color: red;
+}
+.cen{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+#hide1{
+    display: none;
+}
+.lockup{
+    display: flex;
+    justify-content:space-between;
+}
+h3{
+    font-size: 15px;
+    font-family: arial;
+    width: 250px;
+    margin-left: 20px;
+}
+#message{
+    display:none;
+    background: white;
+    color: #000;
+    border-radius: 8px;
+    margin-top: -200px;
+    position: absolute;
+    width: 370px;
+    padding: 20px;
+  }
+  #message h3{
+    font-family: Fira code !important;
+  }
+  #message p{
+    font-family: Fira code !important;
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  .valid {
+    color: green;
+    text-align: left;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: 0px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+    text-align:left;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: 0px;
+    content: "✖";
+  }
+  span a{
+    color: black;
+  }
+  /* .content{
+    margin-top: -5px;
+    letter-spacing: 2px;
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: 2px;
+    color: white;
+}
+.web{
+    margin-top: 10px;
+    text-align: center;
+}
+.logo{
+    font-size: 20px;
+    font-family:Verdana;
+    color: white;
+    padding: 10px;
+    letter-spacing: 10px;
+} */
+@media only screen and (max-width: 600px) {
+    body{
+        margin-left: 0px;
+        /* margin: 0%; */
+        width: 100%;
+    }
+    img{
+        width: 200px;
+    }
+    .subbody{
+        flex-direction: column;
+        margin: 0%;
+        width: 100%;
+    }
+    .group1{
+        width: 100%;
+        padding: 15px;
+    }
+    .group2{
+        width: 100%;
+    }
+    .cen{
+        width: 100%; 
+    }
+    form{
+        margin: 5px;
+        width: 95%;
+    }
+    .submit{
+        width: 100%;
+    }
+    #message{
+        margin-top: 0;
+        width: 90%;
+        top: 10px;
+        position: absolute;
+    }
+}

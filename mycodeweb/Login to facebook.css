@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(199, 195, 195);
+    margin: 0;
+}
+.group0{
+    display: flex;
+    justify-content: center;
+    margin:10%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white; ;
+    width: 70%;
+    height: 400px;
+    margin: 10px;
+}
+h2{
+    text-align: center !important;
+}
+.enclose{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.encloseall{
+    display: flex;
+    justify-content: center;
+}
+input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:center;
+    background-color: transparent;
+    outline: none;
+}
+button{
+    margin-top: 20px;
+}
+.buttonboth{
+    display: flex;
+    justify-content: space-between;
+}
+.bth{
+    border: none;
+    background-color:#a00101;
+    width:80px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+.btpcancel{
+    border: none;
+    background-color:#a00101;
+    width:80px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    
+}
+.help{
+    border: none;
+    background-color: rgb(1, 53, 73);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+.bth:hover{
+    background-color: #f10707;
+    
+}
+.btpcancel:hover{
+    background-color:#f10707;
+    
+}
+.help:hover{
+    background-color:rgb(4, 117, 161);
+}
+@media only screen and (max-width: 600px) {
+    body{
+        margin: 0%;
+    }
+    .group0{
+        margin: 0%;
+    }
+    .form{
+        width: 100%;
+        margin: 0%;
+    }
+
+} 
